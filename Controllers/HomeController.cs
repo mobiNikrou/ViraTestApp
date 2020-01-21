@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ViraTestApp.Models;
+using ViraTestApp.TestCases;
 
 namespace ViraTestApp.Controllers
 {
@@ -29,7 +30,7 @@ namespace ViraTestApp.Controllers
             string ProjectName = ProjectNames.ProjectName.ToString();
             string TestType = TestTypes.TestType.ToString();
             string ApplicatioName = ApplicatioNames.ApplicatioName.ToString();
-            // App1TestCases Testobj = new App1TestCases();
+            TestCase1 Testobj = new TestCase1();
             switch (ProjectName)
             {
                 case "lifeAlborzInsurance":
@@ -41,12 +42,12 @@ namespace ViraTestApp.Controllers
                             switch (TestType)
                             {
                                 case "AcceptanceTest":
-                                    // string[] testrepo = Testobj.TestAction1();
-                                    // IList<TestingResultModel> testindexlist = new List<TestingResultModel>();
-                                    // testindexlist.Add(new TestingResultModel() { TestCheck1 = testrepo[0], TestCheck2 = testrepo[1], TestCheck3 = testrepo[2] });
+                                     string[] testrepo = Testobj.TestAction1();
+                                     IList<TestingResultModel> testindexlist = new List<TestingResultModel>();
+                                     testindexlist.Add(new TestingResultModel() { TestCheck1 = testrepo[0], TestCheck2 = testrepo[1], TestCheck3 = testrepo[2] });
 
-                                    // ViewData["testindexlist"] = testindexlist;
-                                    // return View("TestResult");
+                                     ViewData["testindexlist"] = testindexlist;
+                                     return View("TestResult");
                                     break;
   
                             }
