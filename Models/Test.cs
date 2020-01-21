@@ -20,6 +20,7 @@ namespace ViraTestApp.Models
     public class TestingResult
 
     {
+        public int Id { get; set; }
         [Display(Name = "TestCheck1")]
         public string TestCheck1 { get; set; }
         [Display(Name = "TestCheck2")]
