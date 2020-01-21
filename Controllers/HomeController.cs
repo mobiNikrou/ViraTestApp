@@ -48,7 +48,7 @@ namespace ViraTestApp.Controllers
 
                                      ViewData["testindexlist"] = testindexlist;
                                      return View("TestResult");
-                                    break;
+                                   
   
                             }
                         }

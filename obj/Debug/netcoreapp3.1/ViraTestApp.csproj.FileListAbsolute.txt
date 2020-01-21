@@ -36,3 +36,4 @@ C:\Users\rezazade-kh\Desktop\Nikrou_Jobs\.Net_WebApp_Projects\ViraTestApp\obj\De
 C:\Users\rezazade-kh\Desktop\Nikrou_Jobs\.Net_WebApp_Projects\ViraTestApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\rezazade-kh\Desktop\Nikrou_Jobs\.Net_WebApp_Projects\ViraTestApp\bin\Debug\netcoreapp3.1\WebDriver.Support.dll
 C:\Users\rezazade-kh\Desktop\Nikrou_Jobs\.Net_WebApp_Projects\ViraTestApp\bin\Debug\netcoreapp3.1\WebDriver.dll
+C:\Users\rezazade-kh\Desktop\Nikrou_Jobs\.Net_WebApp_Projects\ViraTestApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\TestResult.cshtml.g.cs

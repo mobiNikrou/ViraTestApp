@@ -1,0 +1,29 @@
+@model ViraTestApp.Models.Test
+@{
+    ViewBag.Title = "View";
+}
+
+<h1 class="display-4 my-4">Test Result</h1>
+<div class="row">
+    <ul class="list-group col-6">
+        <li class="list-group-item">First item</li>
+        <li class="list-group-item">Second item</li>
+        <li class="list-group-item">Third item</li>
+    </ul>
+    <ul class="list-group col-6 ">
+
+        @foreach (var std in ViewData["testindexlist"] as IList<TestingResultModel>)
+        {
+            <li class="list-group-item ">
+                @std.TestCheck1
+            </li>
+            <li class="list-group-item ">
+                @std.TestCheck2
+            </li>
+            <li class="list-group-item ">
+                @std.TestCheck3
+            </li>
+        }
+
+    </ul>
+</div>
