@@ -4,14 +4,17 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using ViraTestApp.Models;
 using ViraTestApp.TestCases;
+using ViraTestApp.Data;
 
 namespace ViraTestApp.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly TestResultContext _context;
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -43,9 +46,10 @@ namespace ViraTestApp.Controllers
                             {
                                 case "AcceptanceTest":
                                      string[] testrepo = Testobj.TestAction1();
-                                     IList<TestingResultModel> testindexlist = new List<TestingResultModel>();
-                                     testindexlist.Add(new TestingResultModel() { TestCheck1 = testrepo[0], TestCheck2 = testrepo[1], TestCheck3 = testrepo[2] });
-
+                                     IList<TestingResult> testindexlist = new List<TestingResult>();
+                                     testindexlist.Add(new TestingResult() { TestCheck1 = testrepo[0],TestCheck2 = testrepo[1], TestCheck3 = testrepo[2] });
+                                      _context.Add(testindexlist);
+                                      _context.SaveChangesAsync();  
                                      ViewData["testindexlist"] = testindexlist;
                                      return View("TestResult");
                                    

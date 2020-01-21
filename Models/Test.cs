@@ -17,7 +17,7 @@ namespace ViraTestApp.Models
         [Display(Name = "Test Type")]
         public TestTypes TestType { get; set; }
     }
-    public class TestingResultModel
+    public class TestingResult
 
     {
         [Display(Name = "TestCheck1")]
