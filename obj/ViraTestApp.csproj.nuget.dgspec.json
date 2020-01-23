@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj": {}
+    "C:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj": {}
   },
   "projects": {
-    "c:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj": {
+    "C:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj",
+        "projectUniqueName": "C:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj",
         "projectName": "ViraTestApp",
-        "projectPath": "c:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj",
+        "projectPath": "C:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj",
         "packagesPath": "C:\\Users\\rezazade-kh\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\obj\\",
+        "outputPath": "C:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

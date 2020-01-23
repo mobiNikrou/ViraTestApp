@@ -97,7 +97,6 @@ namespace ViraTestApp.Controllers
             {
                 return NotFound();
             }
-            int x = test.Id;
             return View(test);
         }
 

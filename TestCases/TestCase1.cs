@@ -14,11 +14,11 @@ namespace ViraTestApp.TestCases
     {
         public string[] TestAction1()
         {
-             IWebDriver driver;
-             driver = new FirefoxDriver();
+            IWebDriver driver;
+            driver = new FirefoxDriver();
             driver.Url = "http://life-test:1364/ContactManagingDirector";
-                Thread.Sleep(1000);
-                driver.Close();
+            Thread.Sleep(1000);
+            driver.Close();
             string[] TstResultArr = { "TR1", "TR2", "TR2" };
             return TstResultArr;
         }
