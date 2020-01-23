@@ -4,13 +4,14 @@
 }
 
 <h1 class="display-4 my-4">Test Result</h1>
-<div class="row">
-    <ul class="list-group col-6">
+
+<div class="row p-0 m-0">
+    <ul class="list-group col-6 p-0 m-0">
         <li class="list-group-item">First item</li>
         <li class="list-group-item">Second item</li>
         <li class="list-group-item">Third item</li>
     </ul>
-    <ul class="list-group col-6 ">
+    <ul class="list-group col-6 p-0 m-0">
 
         @foreach (var std in ViewData["testindexlist"] as IList<TestingResult>)
         {
@@ -24,6 +25,7 @@
                 @std.TestCheck3
             </li>
         }
-
     </ul>
 </div>
+@Html.ActionLink("Download PDF", "","","",new { @class= "btn btn-primary float-right mt-2"})
+@Html.ActionLink("Run Another Test", "","","",new { @class= "btn btn-light float-right mr-2 mt-2"})

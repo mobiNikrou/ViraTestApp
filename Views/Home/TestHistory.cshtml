@@ -1,0 +1,48 @@
+@model IEnumerable<ViraTestApp.Models.TestingResult>
+
+@{
+    ViewData["Title"] = "Test History";
+}
+
+<h1>Test History</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TestCheck1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TestCheck2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TestCheck3)
+            </th>
+            <th>
+                Actions
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestCheck1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestCheck2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestCheck3)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "","","",new { @class= "btn btn-warning" })
+                @Html.ActionLink("Delete", "Delete", new{id=item.Id} ,new { @class= "btn btn-danger"})
+                @Html.ActionLink("Run Test", "Delete", new{id=item.Id} ,new { @class= "btn btn-light"})
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>

@@ -8,19 +8,22 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using ViraTestApp.Models;
 using ViraTestApp.TestCases;
+using Microsoft.EntityFrameworkCore;
 using ViraTestApp.Data;
+
+
 
 namespace ViraTestApp.Controllers
 {
     public class HomeController : Controller
     {
         private readonly TestResultContext _context;
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(TestResultContext context)
         {
-            _logger = logger;
+            _context = context;
         }
+        
+        
         [HttpGet]
         public IActionResult Index()
         {
@@ -47,13 +50,17 @@ namespace ViraTestApp.Controllers
                                 case "AcceptanceTest":
                                      string[] testrepo = Testobj.TestAction1();
                                      IList<TestingResult> testindexlist = new List<TestingResult>();
-                                     testindexlist.Add(new TestingResult() { TestCheck1 = testrepo[0],TestCheck2 = testrepo[1], TestCheck3 = testrepo[2] });
-                                      _context.Add(testindexlist);
+                                     testindexlist.Add(new TestingResult() { TestCheck1 = ApplicatioName,TestCheck2 = ProjectName, TestCheck3 = TestType });
+
+                                     TestingResult aaa = new TestingResult();
+                                     aaa.TestCheck1 = ApplicatioName;
+                                     aaa.TestCheck2 = ProjectName;
+                                     aaa.TestCheck3 = TestType;
+
+                                      _context.Add(aaa);
                                       _context.SaveChangesAsync();  
                                      ViewData["testindexlist"] = testindexlist;
                                      return View("TestResult");
-                                   
-  
                             }
                         }
                             break;
@@ -70,6 +77,40 @@ namespace ViraTestApp.Controllers
         {
             return View();
         }
+
+
+        public async Task<IActionResult> TestHistory()
+        {
+            return View(await _context.TestingResult.ToListAsync());
+        }
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var test = await _context.TestingResult
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (test == null)
+            {
+                return NotFound();
+            }
+            int x = test.Id;
+            return View(test);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var test = await _context.TestingResult.FindAsync(id);
+            _context.TestingResult.Remove(test);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(TestHistory));
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj": {}
+    "c:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj": {
+    "c:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj",
+        "projectUniqueName": "c:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj",
         "projectName": "ViraTestApp",
-        "projectPath": "C:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj",
+        "projectPath": "c:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\ViraTestApp.csproj",
         "packagesPath": "C:\\Users\\rezazade-kh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\obj\\",
+        "outputPath": "c:\\Users\\rezazade-kh\\Desktop\\Nikrou_Jobs\\.Net_WebApp_Projects\\ViraTestApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,6 +41,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "FontAwesome": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
